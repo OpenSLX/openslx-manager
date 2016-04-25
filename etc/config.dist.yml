@@ -1,0 +1,22 @@
+general:
+  openslx-bin: '/opt/openslx/openslx/openslx'
+  mltk-bin: '/opt/openslx/mltk/mltk'
+  image-path: '/var/openslx/images'
+  www-path: '/var/openslx/www'
+  tftpd-path: '/var/openslx/tftpboot'
+  default-image: 'example'
+  dnbd3-servers:
+    - 'boot01.mynetwork.lan'
+    - 'boot02.mynetwork.lan'
+    - 'boot03.mynetwork.lan'
+
+images:
+  example:
+    name: 'example-1.0-default'
+    menu-title: 'Example (Ubuntu 16.04 LTS)'
+    remote: 'example00.mynetwork.lan'
+    stage32-name: 'stage32-example'
+    config: 'example'
+    keep-stable: 3
+    keep-oldstable: 6
+    keep-testing: 12
